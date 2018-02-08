@@ -35,6 +35,7 @@ module JavaBuildpack
         properties             = {
           'address'   => credentials[ADDRESS],
           'output'    => 'tcpserver',
+          'append'    => 'false',
           'sessionid' => '$CF_INSTANCE_ID'
         }
 
