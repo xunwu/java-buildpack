@@ -35,8 +35,7 @@ module JavaBuildpack
         properties             = {
           'address'   => credentials[ADDRESS],
           'output'    => 'tcpserver',
-          'append'    => 'false',
-          'sessionid' => '$CF_INSTANCE_ID'
+          'append'    => 'false'
         }
 
         properties['excludes'] = credentials['excludes'] if credentials.key? 'excludes'
