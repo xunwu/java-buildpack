@@ -34,7 +34,7 @@ module JavaBuildpack
         credentials            = @application.services.find_service(FILTER, ADDRESS)['credentials']
         properties             = {
           'address'   => credentials[ADDRESS],
-          'output'    => 'tcpserver',
+          'output'    => credentials[OUTPUT],
           'sessionid' => '$CF_INSTANCE_ID'
         }
 
