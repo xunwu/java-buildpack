@@ -33,8 +33,8 @@ module JavaBuildpack
       def release
         credentials            = @application.services.find_service(FILTER, ADDRESS)['credentials']
         properties             = {
-          'address'   => credentials[ADDRESS],
-          'output'    => 'tcpserver',
+          'address'   => 'xun-getjacoco2-spoilless-anaplerosis.run.aws-usw02-pr.ice.predix.io',
+          'output'    => 'tcpclient',
           'append'    => 'false',
           'classdumpdir' => './coco'
         }
