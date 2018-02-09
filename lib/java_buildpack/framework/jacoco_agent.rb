@@ -35,7 +35,8 @@ module JavaBuildpack
         properties             = {
           'address'   => credentials[ADDRESS],
           'output'    => 'tcpserver',
-          'append'    => 'false'
+          'append'    => 'false',
+          'classdumpdir' => './coco'
         }
 
     
