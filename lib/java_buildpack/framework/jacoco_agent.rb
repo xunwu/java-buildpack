@@ -33,13 +33,12 @@ module JavaBuildpack
       def release
         credentials            = @application.services.find_service(FILTER, ADDRESS)['credentials']
         properties             = {
-          'address'   => '10.72.5.14',
-          'output'    => 'tcpclient',
-          'append'    => 'false',
-          'classdumpdir' => './coco'
+          'address'   => credentials[ADDRESS],
+          'output'    => 'tcpserver',
+          'sessionid' => '$CF_INSTANCE_ID'
         }
 
-    
+        properties['includes'] = credentials['includes'] if credentials.key? 'includes'
         properties['port']     = credentials['port'] if credentials.key? 'port'
 
         @droplet.java_opts.add_javaagent_with_props(@droplet.sandbox + 'jacocoagent.jar', properties)
