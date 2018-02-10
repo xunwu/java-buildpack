@@ -35,7 +35,8 @@ module JavaBuildpack
         properties             = {
           'address'   => credentials[ADDRESS],
           'output'    => 'tcpserver',
-          'sessionid' => '$CF_INSTANCE_ID'
+          'sessionid' => '$CF_INSTANCE_ID',
+          'classdumpdir' => './coco'
         }
 
         properties['includes'] = credentials['includes'] if credentials.key? 'includes'
