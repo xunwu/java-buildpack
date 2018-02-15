@@ -36,7 +36,7 @@ module JavaBuildpack
           'address'   => credentials[ADDRESS],
           'output'    => 'tcpserver',
           'sessionid' => '$CF_INSTANCE_ID',
-          'classdumpdir' => './coco'
+          'classdumpdir' => './microtester-class'
         }
 
         properties['includes'] = credentials['includes'] if credentials.key? 'includes'
