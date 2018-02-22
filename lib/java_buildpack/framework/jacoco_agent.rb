@@ -33,7 +33,7 @@ module JavaBuildpack
       def release
         credentials            = @application.services.find_service(FILTER, ADDRESS)['credentials']
         properties             = {
-          'address'   => credentials[ADDRESS],
+          'address'   => 'localhost',
           'output'    => 'tcpserver',
           'sessionid' => '$CF_INSTANCE_ID',
           'classdumpdir' => './microtester-class'
